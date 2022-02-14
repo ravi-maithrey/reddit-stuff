@@ -1,8 +1,8 @@
 import praw
 
 
-#giving only the three below creates a read-only instance
+#taking input from a local praw.ini file
 reddit = praw.Reddit("bot1")
 
-for submission in reddit.subreddit("learnprogramming").new(limit=4):
-    print(submission.title)
+for submission in reddit.subreddit("learnprogramming").new(limit=1):
+    submission.reply("You can easily google that")
